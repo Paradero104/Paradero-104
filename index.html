@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paradero 104 - Cevichería</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header__navbar">
+            <div class="header__logo-hamburger">
+                <a href="#" class="menu__link">
+                    <p style="font-weight: bold,">Paradero 104</p>
+                </a>
+                <button id="btn__open"><i class="fa-solid fa-bars"></i></button>
+            </div>
+            <ul class="menu" id="menu">
+                <button id="btn__close"><i class="fa-solid fa-xmark"></i></button>
+                <li class="menu__list"><a href="#hero" class="menu__link">Inicio</a></li>
+                <li class="menu__list"><a href="#nosotros" class="menu__link">Nosotros</a></li>
+                <li class="menu__list"><a href="#productos" class="menu__link">Productos</a></li>
+                <li class="menu__list"><a href="#ubicacion" class="menu__link">Ubicación</a></li>
+                <li class="menu__list"><a href="#contacto" class="menu__link">Contacto</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="overlay">
+            <h1>Paradero 104</h1>
+            <p>En Paradero 104 no solo servimos ceviche, servimos tradición, frescura y pasión por el mar. Cada plato está preparado al momento con ingredientes seleccionados y el auténtico sabor peruano que despierta los sentidos.</p>
+        </div>
+    </section>
+
+   <!-- Sobre Nosotros -->
+<section class="section" id="nosotros" style="display: flex; align-items: center;">
+  <img src="img/chica.png" alt="Imagen de Paradero 104" style="width: 40%; margin-right: 20px;">
+  <div style="width: 60%;">
+    <h2>Sobre Nosotros</h2>
+    <p> En Paradero 104 nos apasiona el ceviche. Nuestra historia nace en la costa peruana, con recetas tradicionales y un toque moderno. ¡Te esperamos para vivir una experiencia marina única! </p>
+  </div>
+</section>
+    
+    <section class="section" id="productos">
+        <h2>Productos Destacados</h2>
+        <div class="productos-grid">
+            <div class="producto-card">
+                <img src="img/cevicheclasico.webp"
+                    alt="Ceviche Clásico">
+                <h3>Ceviche Clásico</h3>
+                <p>Fresco y lleno de sabor, preparado con pescado del día.</p>
+                <button>Comprar</button>
+            </div>
+            <div class="producto-card">
+                <img src="img/jaleaMixta.jpg"
+                    alt="Jalea Mixta">
+                <h3>Jalea Mixta</h3>
+                <p>Deliciosa combinación de mariscos fritos con yuca y salsa criolla.</p>
+                <button>Comprar</button>
+            </div>
+            <div class="producto-card">
+                <img src="img/lechetigre.webp"
+                    alt="Leche de Tigre">
+                <h3>Leche de Tigre</h3>
+                <p>Potente y revitalizante, ideal como entrada o acompañante.</p>
+                <button>Comprar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ubicación -->
+    <!-- Ubicación -->
+<!-- Ubicación -->
+<section class="section" id="ubicacion">
+  <h2>¿Dónde Estamos Ubicados?</h2>
+  <div style="display: flex; justify-content: center; margin-top: 20px;">
+    <img src="img/WhatsApp Image 2025-06-06 at 5.10.32 PM.jpg" alt="Imagen de ubicación" style="width: 90%; border-radius: 10px;">
+  </div>
+  <p>Av. Lurigancho 1076, San Juan de Lurigancho 15427</p>
+  <div class="map" style="margin-top: 20px;">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.391773194187!2d-76.99963802405131!3d-12.016527241340308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c5000d95b6ff%3A0x3485bd2e5ebd8eea!2sRestaurante%20paradero%20104!5e0!3m2!1ses!2spe!4v1749250395435!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</section>
+
+    <!-- Contacto -->
+    <section class="section" id="contacto">
+        <h2>Contáctanos</h2>
+        <form id="contactForm">
+            <input type="text" placeholder="Nombre" required />
+            <input type="email" placeholder="Correo electrónico" required />
+            <textarea placeholder="Tu mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Paradero 104 - Todos los derechos reservados</p>
+        <div class="social">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">WhatsApp</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
