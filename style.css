@@ -221,7 +221,7 @@ footer .social a:hover {
     width: 70vw;
     height: 100vh;
     padding: 70px 0;
-    background-color: var(--color-secondary);
+    background-color: #0093c0 ;
     transform: translateX(110%);
     transition: transform 0.3s ease-in-out;
     overflow-y: auto;
