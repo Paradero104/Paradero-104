@@ -124,6 +124,7 @@ body {
 }
 
 button {
+    background-color: transparent;
     color: #ffffff;
     border: none;
     padding: 10px 20px;
