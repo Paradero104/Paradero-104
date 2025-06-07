@@ -4,7 +4,31 @@
     padding: 0;
     box-sizing: border-box;
 }
+#nosotros {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 
+#nosotros img {
+    display: block;
+     flex: 1 1 100px;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+.nosotros__container {
+     flex: 1 1 120px;
+}
+
+#productos {
+    background-color: #0093c0;
+}
+
+#productos h2 {
+   color: #fff;
+}
 
 li {
     list-style: none;
@@ -94,6 +118,7 @@ body {
 }
 
 .producto-card {
+    background-color: #0093c0;
     background-color: #fff;
     border-radius: 10px;
     overflow: hidden;
@@ -261,6 +286,7 @@ footer .social a:hover {
 #btn__open, #btn__close {
     padding: 10px 15px;
     cursor: pointer;
+    background-color: transparent;
 }
 
 #btn__close{
