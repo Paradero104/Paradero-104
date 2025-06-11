@@ -1,0 +1,12 @@
+/* Footer */
+footer {
+    background: var(--color-primario);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer a {
+    color:var(--color-terciario);
+    text-decoration: none;
+}
