@@ -27,3 +27,23 @@ window.onscroll = () => {
     lastScroll = current;
     header.style.backgroundColor = current > 0 ? "var(--color-primario)" : "transparent";
 };
+
+
+
+  // Mostrar el modal automáticamente
+  window.addEventListener('load', function () {
+    document.getElementById('modal').style.display = 'flex';
+  });
+
+  // Cerrar el modal al hacer clic en la "X"
+  document.querySelector('.close').addEventListener('click', function () {
+    document.getElementById('modal').style.display = 'none';
+  });
+
+  // También cerrar si se hace clic fuera del contenido
+  window.addEventListener('click', function (e) {
+    const modal = document.getElementById('modal');
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });

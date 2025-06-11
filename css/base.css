@@ -51,7 +51,8 @@ html {
 h1 {
     font-size: 4rem;
     color: var(--color-secundario);
-    margin: 0 auto;
+    margin: 0 10px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
 }
 
 h2, h3 {
