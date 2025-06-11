@@ -48,22 +48,22 @@ const closeBtn = document.getElementById("closeModal");
 
 // Mostrar modal automáticamente al cargar la página
 window.onload = () => {
-    modal.style.display = "block";
+  modal.style.display = "block";
 };
 
 // Botón de apertura manual (por si quieres mantenerlo)
 openBtn.onclick = () => {
-    modal.style.display = "block";
+  modal.style.display = "block";
 };
 
 closeBtn.onclick = () => {
-    modal.style.display = "none";
+  modal.style.display = "none";
 };
 
 window.onclick = (e) => {
-    if (e.target === modal) {
+  if (e.target === modal) {
     modal.style.display = "none";
-    }
+  }
 };
 
 
