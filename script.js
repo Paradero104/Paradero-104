@@ -47,3 +47,34 @@ window.onscroll = () => {
       modal.style.display = 'none';
     }
   });
+
+ // Script de formulario
+
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwP78RITYDcc7Hr0k47VcWJIHx99ZL77nYCOjOku5YJatUDfA6qVPtvMSmhUhRA7g6xZQ/exec';
+  const form = document.getElementById("formulario");
+
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    const data = {
+      nombre: document.getElementById("nombre").value,
+      correo: document.getElementById("correo").value,
+      telefono: document.getElementById("telefono").value,
+    };
+
+    fetch(scriptURL, {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+    .then(res => res.json())
+    .then(response => {
+      alert("¡Datos enviados con éxito!");
+      form.reset();
+    })
+    .catch(error => {
+      alert("Ocurrió un error: " + error.message);
+    });
+  });
+
