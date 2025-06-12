@@ -51,30 +51,37 @@ window.onscroll = () => {
  // Script de formulario
 
   const scriptURL = 'https://script.google.com/macros/s/AKfycbwP78RITYDcc7Hr0k47VcWJIHx99ZL77nYCOjOku5YJatUDfA6qVPtvMSmhUhRA7g6xZQ/exec';
-  const form = document.getElementById("formulario");
 
-  form.addEventListener("submit", e => {
-    e.preventDefault();
-    const data = {
-      nombre: document.getElementById("nombre").value,
-      correo: document.getElementById("correo").value,
-      telefono: document.getElementById("telefono").value,
-    };
+  function enviarFormulario(idFormulario) {
+    const form = document.getElementById(idFormulario);
+    if (!form) return;
 
-    fetch(scriptURL, {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })
-    .then(res => res.json())
-    .then(response => {
-      alert("¡Datos enviados con éxito!");
-      form.reset();
-    })
-    .catch(error => {
-      alert("Ocurrió un error: " + error.message);
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const data = {
+        nombre: form.querySelector('#nombre').value,
+        correo: form.querySelector('#correo').value,
+        telefono: form.querySelector('#telefono').value
+      };
+
+      fetch(scriptURL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(res => {
+        alert("¡Formulario enviado con éxito!");
+        form.reset();
+      })
+      .catch(err => {
+        alert("Hubo un error: " + err.message);
+      });
     });
-  });
+  }
 
+  // Aplica el envío a ambos formularios
+  enviarFormulario("formulario-modal");
+  enviarFormulario("formulario-contacto");
