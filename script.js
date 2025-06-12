@@ -59,19 +59,12 @@ window.onscroll = () => {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      const data = {
-        nombre: form.querySelector('#nombre').value,
-        correo: form.querySelector('#correo').value,
-        telefono: form.querySelector('#telefono').value
-      };
+    const formData = new FormData(form);
 
-      fetch(scriptURL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      })
+    fetch(scriptURL, {
+         method: 'POST',
+         body: formData
+       })
       .then(res => {
         alert("¡Formulario enviado con éxito!");
         form.reset();
