@@ -50,31 +50,29 @@ window.onscroll = () => {
 
  // Script de formulario
 
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbwP78RITYDcc7Hr0k47VcWJIHx99ZL77nYCOjOku5YJatUDfA6qVPtvMSmhUhRA7g6xZQ/exec';
+function enviarDatos(data) {
+  fetch("https://script.google.com/macros/s/AKfycbxcYtXWcNfmh26Jku0RhzEKIVhETQASWfCUy1evto1TDm2QflsX0tT0AvfoCOTvT3rF7A/exec", {
+    method: "POST",
+    mode: "no-cors",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+}
 
-  function enviarFormulario(idFormulario) {
-    const form = document.getElementById(idFormulario);
-    if (!form) return;
+function manejarEnvioFormulario(formularioId) {
+  document.getElementById(formularioId).addEventListener("submit", function (e) {
+    e.preventDefault();
 
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
+    const formData = new FormData(this);
+    const data = {};
+    formData.forEach((value, key) => data[key] = value);
 
-    const formData = new FormData(form);
+    enviarDatos(data);
+    this.reset();
+  });
+}
 
-    fetch(scriptURL, {
-         method: 'POST',
-         body: formData
-       })
-      .then(res => {
-        alert("¡Formulario enviado con éxito!");
-        form.reset();
-      })
-      .catch(err => {
-        alert("Hubo un error: " + err.message);
-      });
-    });
-  }
-
-  // Aplica el envío a ambos formularios
-  enviarFormulario("formulario-modal");
-  enviarFormulario("formulario-contacto");
+manejarEnvioFormulario("formulario-contacto");
+manejarEnvioFormulario("formulario-modal");
