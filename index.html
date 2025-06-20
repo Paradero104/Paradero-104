@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <!-- Sección del Header -->
     <header class="header">
         <div class="header__container container">
             <div class="header__logo">
@@ -25,7 +26,8 @@
                     <li class="header__list"><a href="#testimonios" class="header__link">Testimonios</a></li>
                     <li class="header__list"><a href="#galeria" class="header__link">Galería</a></li>
                     <li class="header__list"><a href="#ubicacion" class="header__link">Ubicación</a></li>
-                    <li class="header__list"><a href="#contacto" class="header__link">Contacto</a></li>
+                    <li class="header__list"><a href="#" id="btn-open-modal"
+                            class="header__link btn-header-1">Regístrate</a></li>
                 </ul>
                 <button class="header__button">
                     <span class="header__bar"></span>
@@ -37,7 +39,8 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
+
+        <!-- Sección: Hero -->
         <section class="hero" id="hero">
             <div class="overlay">
                 <h1>Paradero 104</h1>
@@ -53,14 +56,15 @@
 
         </section>
 
-        <!-- Sección 2: Sobre Nosotros -->
-        <section id="sobre-nosotros" class="seccion nosotros">
+        <!-- Sección: Sobre Nosotros -->
+        <section id="nosotros" class="seccion nosotros">
             <div class="nosotros-contenido">
                 <div class="texto">
                     <h2>Sobre Nosotros</h2>
                     <p class="texto--negro">En Paradero 104 combinamos tradición y frescura para ofrecerte el mejor
-                        ceviche de la costa. ¡Tu paladar
-                        lo agradecerá!</p>
+                        ceviche de la costa. Seleccionamos diariamente los mariscos más frescos y los acompañamos con el
+                        auténtico toque de nuestra sazón peruana. Cada plato es preparado al momento, garantizando
+                        sabor, frescura y calidad inigualable.</p>
                 </div>
                 <div class="imagen">
                     <img src="img/chica.png" alt="Encargada de la sede">
@@ -68,7 +72,7 @@
             </div>
         </section>
 
-        <!-- Sección: Menú Destacado -->
+        <!-- Sección: Menú -->
         <section id="menu" class="seccion">
             <h2>Menú Destacado</h2>
             <div class="menu-grid">
@@ -96,6 +100,10 @@
             <div class="testimonios">
                 <blockquote>"¡El mejor ceviche que he probado en mi vida!" - Carla M.</blockquote>
                 <blockquote>"Atención rápida y sabor incomparable." - Luis R.</blockquote>
+                <blockquote>"El mejor lugar para disfrutar un ceviche fresco y auténtico." — Javier M.</blockquote>
+                <blockquote>"Excelente atención, ambiente acogedor y sabores que sorprenden." — Paola G.</blockquote>
+                <blockquote>"Una experiencia gastronómica que supera las expectativas. ¡Recomendado al 100%!" — Daniel
+                    V.</blockquote>
             </div>
         </section>
 
@@ -125,23 +133,10 @@
             <p>Estamos en Av. La Marina 104, Lima, Perú.</p>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.391773194187!2d-76.99963802405131!3d-12.016527241340308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c5000d95b6ff%3A0x3485bd2e5ebd8eea!2sRestaurante%20paradero%20104!5e0!3m2!1ses!2spe!4v1749250395435!5m2!1ses!2spe"
-                width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen></iframe>
+                width="100%" height="300" frameborder="0" style="border-radius: 20px;" allowfullscreen></iframe>
         </section>
 
-        <!-- Sección: Contacto -->
-        <section id="contacto">
-            <div class="form-container">
-                <h2 class="texto--blanco">ÚNETE A NUESTRA COMUNIDAD</h2>
-                <form id="formulario-contacto" class="formulario">
-                    <input type="text" name="nombre" placeholder="Nombre y Apellidos" required>
-                    <input type="email" name="correo" placeholder="Correo electrónico" required>
-                    <input type="tel" name="telefono" placeholder="Teléfono" required>
-                    <button type="submit">Registrarse</button>
-                </form>
-            </div>
-        </section>
-
-         <!-- Botón flotante -->
+        <!-- Botón flotante -->
         <a href="https://wa.me/51922477983?text=¡Hola!%20😃%20Estoy%20interesado%20en%20más%20información%20sobre%20los%20productos%20de%20la%20cevichería%20Paradero%20104.%20🦐🍋%20¿Me%20puedes%20ayudar%3F"
             class="whatsapp-float" target="_blank" rel="noopener">
             <i class="fa-brands fa-whatsapp"></i>
@@ -163,6 +158,36 @@
         </div>
 
     </main>
+
+    <!-- Sección: Botón flotante -->
+
+    <a href="https://wa.me/51922477983?text=¡Hola!%20Estoy%20interesado%20en%20más%20información%20sobre%20los%20productos%20de%20la%20cevichería%20Paradero%20104.%20¿Me%20puedes%20ayudar%3F"
+        class="whatsapp-float" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Sección: Modal -->
+
+    <div id="modal" class="modal">
+        <!-- Sección: Modal Registrado -->
+
+        <div id="successMessage">
+            <i class="fa-solid fa-circle-check"></i> Registrado correctamente.
+        </div>
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>ÚNETE A NUESTRA COMUNIDAD</h2>
+
+            <form id="formulario-modal" class="formulario">
+                <input type="text" name="nombre" placeholder="Nombres y Apellidos" required>
+                <input type="email" name="correo" placeholder="Correo" required>
+                <input type="tel" name="telefono" placeholder="Teléfono" required>
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+    </div>
+
+
     <!-- Sección: Footer -->
     <footer>
         <p>&copy; 2025 Paradero 104</p>

@@ -48,11 +48,19 @@ html {
     scroll-behavior: smooth;
 }
 
+p {
+    /* text-align: left; */
+}
+
 h1 {
     font-size: 4rem;
     color: var(--color-secundario);
     margin: 0 10px;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+h2 {
+    font-size: 2rem;
 }
 
 h2, h3 {
@@ -65,4 +73,31 @@ h2, h3 {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+
+.btn-header-1 {
+    background-color: var(--color-secundario);
+    color: #016a8a;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+.btn-header-2 {
+    background-color: #016a8a;
+    color: var(--color-secundario);
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+@keyframes btn-expand {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
 }
