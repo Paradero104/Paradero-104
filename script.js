@@ -97,32 +97,3 @@ document
     e.preventDefault();
     document.getElementById("modal").style.display = "flex";
   });
-
- // Script de formulario
-
-function enviarDatos(data) {
-  fetch("https://script.google.com/macros/s/AKfycbxcYtXWcNfmh26Jku0RhzEKIVhETQASWfCUy1evto1TDm2QflsX0tT0AvfoCOTvT3rF7A/exec", {
-    method: "POST",
-    mode: "no-cors",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  });
-}
-
-function manejarEnvioFormulario(formularioId) {
-  document.getElementById(formularioId).addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const formData = new FormData(this);
-    const data = {};
-    formData.forEach((value, key) => data[key] = value);
-
-    enviarDatos(data);
-    this.reset();
-  });
-}
-
-manejarEnvioFormulario("formulario-contacto");
-manejarEnvioFormulario("formulario-modal");
