@@ -1,7 +1,7 @@
 /* Sección: Hero */
 
 .hero {
-    background: linear-gradient(#002e6b, transparent), url('../img/hero.jpg');
+    background: linear-gradient(#002e6b 15%, transparent), url('../img/hero.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh; 
@@ -14,12 +14,12 @@
 
 .hero__paragraph {
   text-align: center;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bold;
   padding: 10px;
 }
 
-/* Sección: textimony */
+/* Sección: testimony */
 
 .testimony {
   padding: 3rem 2rem;
@@ -37,38 +37,13 @@
 
 .testimony__item {
   margin-bottom: 1.5rem;
-  padding: 1.5rem;
-  background-color: white;
-  border-left: 8px solid var(--color-primary, #016a8a);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 2rem 1.5rem;
+  background-color: var(--color-white);
+  border-left: 8px solid var(--color-secondary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
   border-radius: 0 8px 8px 0;
 }
 
-
-/* Sección: Nosotros */
-.us {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.us__container,
-.us_imageContainer {
-  flex: 1 1 min(400px, 100%);
-}
-
-.us_imageContainer {
-  border-radius: 15px;
-  overflow: hidden;
-}
-
-.us__image {
-  width: 100%;
-  height: auto;
-}
 
 /* Sección: Menú */
 
@@ -115,6 +90,60 @@
 }
 
 
+/* Sección: Nosotros */
+.us {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.us__container,
+.us_imageContainer {
+  flex: 1 1 min(400px, 100%);
+}
+
+.us__container {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.us__h2 {
+  margin-bottom: 1rem;
+}
+.us_imageContainer {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.us__image {
+  width: 100%;
+  height: auto;
+}
+
+
+/* Sección: Sede */
+
+.headquarters {
+  height: 600px;
+  background: linear-gradient(var(--color-primary), transparent), url(../img/WhatsApp\ Image\ 2025-06-06\ at\ 5.10.32\ PM.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.headquarters__h2 {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 3rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+
 
 
 
@@ -153,46 +182,88 @@
     background-color :#016a8a;
 }
 
-.texto--negro {
-    color: var(--color-terciario);
-}
+/* Sección: botón */
 
-.texto--blanco {
-    color: var(--color-blanco);
-}
-
-
-
-/* Botón de whatsApp */
-
-.whatsapp-float {
+.btn__float {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #25d366;
-  color: white;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 30px;
-  line-height: 60px;
-  z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  z-index: 100;
+}
+
+.btn__float a {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: btn-expand 2s infinite ease-in;
+  width: 80px;
+  height: 80px;
+  color: var(--color-white);
+  font-size: 2.5rem;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  overflow: visible;
 }
 
-.whatsapp-float:hover {
+.whatsapp-float {
+    background-color: #25d366;
+}
+
+.delivery-float {
+  background-color: var(--color-secondary);
+}
+
+.btn__float a:hover {
   transform: scale(1.1);
-  background-color: #1ebe5d;
 }
 
-.whatsapp-float i {
-  font-size: 3rem;
+.btn__message {
+  position: absolute;
+  right: 100px;
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  animation: floatMsg 14s ease-in-out infinite;
+}
+
+
+/* Animación de entrada/salida */
+@keyframes floatMsg {
+  0% {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+
+  5% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  25% {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(30px);
+    opacity: 0; 
+  }
 }
 
 

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 </head>
 
@@ -55,11 +56,10 @@
                         sabor
                         fresco, pasión y tradición en cada bocado.
                     </p> -->
-                    <p class="hero__paragraph">"El sabor del mar en su punto, con la frescura y sazón que nos distingue"
-                    </p>
+                    <p class="hero__paragraph">EL SABOR DEL MAR EN SU PUNTO.</p>
 
                     <!-- Call to Action -->
-                    <a href="pdf/paradero104.pdf" class="btn__secondary" download="paradero104.pdf">Descargar carta</a>
+                    <!-- <a href="pdf/paradero104.pdf" class="btn__secondary" download="paradero104.pdf">Descargar carta</a> -->
                 </div>
             </div>
 
@@ -81,22 +81,6 @@
             </div>
         </section>
 
-        <!-- Sección: Sobre Nosotros -->
-        <section id="us" class="us">
-            <div class="us__container">
-                <h2 class="us__h2">SOBRE NOSOTROS</h2>
-                <p class="us__paragraph">En Paradero 104 combinamos tradición, frescura y pasión por la cocina para
-                    ofrecerte el mejor ceviche de la costa. Cada día seleccionamos cuidadosamente los mariscos más
-                    frescos del mercado, asegurando que cada ingrediente mantenga su sabor natural y textura perfecta.
-                    Acompañamos nuestros platos con el auténtico toque de nuestra sazón peruana, heredada de
-                    generaciones y perfeccionada en cada preparación. Cada ceviche es elaborado al momento, con
-                    dedicación y cariño, para brindarte una experiencia culinaria que resalte por su sabor, frescura y
-                    una calidad inigualable que nos distingue.</p>
-            </div>
-            <div class="us_imageContainer">
-                <img src="img/chica.png" alt="Encargada de la sede" class="us__image">
-            </div>
-        </section>
 
         <!-- Sección: Menú -->
         <section id="menu" class="menu">
@@ -125,21 +109,43 @@
             </div>
         </section>
 
+        <!-- Sección: Sobre Nosotros -->
+        <section id="us" class="us">
+            <div class="us__container">
+                <h2 class="us__h2">SOBRE NOSOTROS</h2>
+                <p class="us__paragraph">En Paradero 104 combinamos tradición, frescura y pasión por la cocina para
+                    ofrecerte el mejor ceviche de la costa. Cada día seleccionamos cuidadosamente los mariscos más
+                    frescos del mercado, asegurando que cada ingrediente mantenga su sabor natural y textura perfecta.
+                    Acompañamos nuestros platos con el auténtico toque de nuestra sazón peruana, heredada de
+                    generaciones y perfeccionada en cada preparación. Cada ceviche es elaborado al momento, con
+                    dedicación y cariño, para brindarte una experiencia culinaria que resalte por su sabor, frescura y
+                    una calidad inigualable que nos distingue.</p>
+            </div>
+            <div class="us_imageContainer">
+                <img src="img/chica.png" alt="Encargada de la sede" class="us__image">
+            </div>
+        </section>
+
         <!-- Sección: Ubicación -->
         <section id="headquarters" class="headquarters">
             <h2 class="headquarters__h2">Sede Principal</h2>
-            <img src="img/WhatsApp Image 2025-06-06 at 5.10.32 PM.jpg" alt="Imagen de ubicación"
-                style="width: 90%; height: 400px; object-fit: cover; border-radius: 10px; margin: 0 auto;">
         </section>
 
     </main>
 
     <!-- Sección: Botón flotante -->
 
-    <a href="https://wa.me/51922477983?text=¡Hola!%20Estoy%20interesado%20en%20más%20información%20sobre%20los%20productos%20de%20la%20cevichería%20Paradero%20104.%20¿Me%20puedes%20ayudar%3F"
-        class="whatsapp-float" target="_blank" rel="noopener">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+    <div class="btn__float">
+        <a href="https://wa.me/51922477983?text=Hola" class="whatsapp-float" target="_blank" rel="noopener">
+            <span class="btn__message">¿Necesitas ayuda?</span>
+            <i class="fa-brands fa-whatsapp btn__iconWhatsapp"></i>
+        </a>
+
+        <a href="#" class="delivery-float" target="_blank" rel="noopener">
+            <span class="btn__message">Pide delivery</span>
+            <i class="fa-solid fa-motorcycle btn__iconDelivery"></i>
+        </a>
+    </div>
 
     <!-- Sección: Modal -->
 
@@ -164,13 +170,32 @@
 
 
     <!-- Sección: Footer -->
-    <footer>
-        <h2>¿Cómo Llegar?</h2>
-        <p>Estamos en Av. La Marina 104, Lima, Perú.</p>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.391773194187!2d-76.99963802405131!3d-12.016527241340308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c5000d95b6ff%3A0x3485bd2e5ebd8eea!2sRestaurante%20paradero%20104!5e0!3m2!1ses!2spe!4v1749250395435!5m2!1ses!2spe"
-            width="100%" height="300" frameborder="0" style="border-radius: 20px;" allowfullscreen></iframe>
+    <footer class="footer">
+        <div class="footer__content footer__content--map">
+            <h3 class="footer__h3">¿Cómo Llegar?</h3>
+            <p class="footer__paragraph">Estamos en Av. La Marina 104, Lima, Perú.</p>
+            <iframe class="footer__map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.391773194187!2d-76.99963802405131!3d-12.016527241340308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c5000d95b6ff%3A0x3485bd2e5ebd8eea!2sRestaurante%20paradero%20104!5e0!3m2!1ses!2spe!4v1749250395435!5m2!1ses!2spe"
+                width="90%" height="300" frameborder="0" allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="footer__content footer__content--info">
+            <h4 class="footer__h4">Redes Sociales</h4>
+            <div class="footer__social">
+                <div class="footer__socialContainer">
+                    <a href=""><i class="fa-brands fa-facebook-f footer__icon"></i></a>
+                </div>
+                <div class="footer__socialContainer">
+                    <a href=""><i class="fa-brands fa-tiktok footer__icon"></i></a>
+                </div>
+            </div>
+
+            <h4 class="footer__h4">Contáctanos</h4>
+            <p class="footer__text">Celular: 922477983</p>
+        </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 

@@ -41,7 +41,7 @@ img {
     height: auto;
 }
 body {
-    background: linear-gradient(var(--color-primary), var(--color-secondary));
+    background-color: #0093c0;
 }
 
 html {
@@ -55,7 +55,6 @@ p {
 
 h1 {
     font-size: 4rem;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
 }
 
 h2 {
