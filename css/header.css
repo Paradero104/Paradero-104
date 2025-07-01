@@ -4,6 +4,7 @@
 .header {
     background-color: var(--color-secondary);
     position: fixed;
+    top: 0;
     padding: 0 15px;
     z-index: 100;
     width: 100%;

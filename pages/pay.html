@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago - Paradero 104</title>
+    <link rel="stylesheet" href="../css/pay.css">
+    <link rel="stylesheet" href="../css/base.css">
+</head>
+
+<body>
+    <h2 class="pay__paragraph">Finaliza tu compra</h2>
+    <form class="formulario" action="#" method="POST">
+        <div class="formulario__grupo">
+            <input type="text" id="nombre" name="nombre" class="formulario__input" placeholder="Nombres y Apellidos"
+                required>
+        </div>
+
+        <div class="formulario__grupo">
+            <input type="tel" id="celular" name="celular" class="formulario__input" placeholder="Celular" required>
+        </div>
+
+        <div class="formulario__grupo">
+            <p class="formulario__label">Escanea este código QR:</p>
+            <img src="../img/qr.JPG" alt="Código QR" class="formulario__qr">
+        </div>
+
+        <div class="formulario__grupo">
+            <label for="comprobante" class="formulario__label">Sube tu comprobante de pago</label>
+            <input type="file" id="comprobante" name="comprobante" accept="image/*" class="formulario__input" required>
+        </div>
+
+        <button type="submit" class="formulario__boton">Enviar</button>
+    </form>
+</body>
+
+</html>
