@@ -1,4 +1,4 @@
-/* Scción: Hero */
+/* Sección: Hero */
 
 .hero {
     background: linear-gradient(#002e6b, transparent), url('../img/hero.jpg');
@@ -12,29 +12,117 @@
     justify-content: center;
 }
 
-.cta-btn {
-  display: inline-block;
-  background-color: #002e6b;
-  color: var(--color-secundario);
-  margin: 0 10px;
-  padding: 0.8rem 1.5rem;
+.hero__paragraph {
+  text-align: center;
+  font-size: 4rem;
   font-weight: bold;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background-color 0.6s ease;
+  padding: 10px;
 }
 
-.cta-btn:hover {
-  background-color: var(--color-secundario);
-  color: #002e6b;
+/* Sección: textimony */
+
+.testimony {
+  padding: 3rem 2rem;
+  text-align: center;
 }
+
+.testimony__h2 {
+  margin-bottom: 2rem;
+}
+
+.testimony__list {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.testimony__item {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background-color: white;
+  border-left: 8px solid var(--color-primary, #016a8a);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 0 8px 8px 0;
+}
+
+
+/* Sección: Nosotros */
+.us {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.us__container,
+.us_imageContainer {
+  flex: 1 1 min(400px, 100%);
+}
+
+.us_imageContainer {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.us__image {
+  width: 100%;
+  height: auto;
+}
+
+/* Sección: Menú */
+
+.menu {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: var(--color-white);
+}
+
+.menu__h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+}
+
+.menu__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.menu__image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.menu__h3 {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+  color: var(--color-primary);
+}
+
+.menu__paragraph {
+  color: var(--color-black);
+  margin-bottom: 10px;
+}
+
+.paragraph__white {
+  color: var(--color-white);
+}
+
+
+
+
 
 
 /* Otra: Sección */
 
 .form-container {
 
-  color: #fff;
   padding: 2rem;
   margin: 1rem;
   border-radius: 12px;
@@ -42,46 +130,8 @@
 
 .form-container h2 {
   text-align: center;
-  color: var(--color-primario);
 }
 
-/* Sección: Nosotros */
-
-
-.nosotros .texto {
-  flex: 1 1 300px;
-  min-width: 280px;
-}
-
-.texto--negro {
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-.nosotros .imagen {
-  flex: 1 1 300px;
-  min-width: 280px;
-}
-
-.nosotros .imagen img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-#menu {
-  background-color: var(--color-primario);
-  min-width: 100%;
-}
-
-#menu h2, #menu h3, p {
-  color: var(--color-secundario);
-}
-
-.texto--negro {
-  color: var(--color-terciario);
-}
 
 
 .formulario input,

@@ -2,25 +2,19 @@
 /* Estilos del Header */
 
 .header {
+    background-color: var(--color-secondary);
     position: fixed;
+    padding: 0 15px;
+    z-index: 100;
     width: 100%;
     height: 80px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     transition:
         transform 0.5s ease,
         opacity 0.4s ease;
 }
-
-.header__container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 15px;
-}
-
 
 /* Estilos del Logo */
 
@@ -28,12 +22,12 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
+
 
 .header__logo {
     width: 60px;
-    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,8 +37,8 @@
 /* Estilos del menu */
 
 .header__menu {
-    background-color: var(--color-primario);
-    position: fixed;
+    background-color: var(--color-secondary);
+    position: absolute;
     top: 0;
     right: 0;
     width: 70vw;
@@ -63,6 +57,14 @@
         box-shadow 0.4s ease 0.4s;
 }
 
+.header__callToAction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+}
+
 .header__menu.header__menu--active {
     transform: translateX(0);
     opacity: 1;
@@ -77,15 +79,30 @@
 .header__link {
     padding: 10px 20px;
     margin: 0.8rem 0;
-    color: var(--color-secundario);
+    color: var(--color-white);
     border-bottom: solid 2px transparent;
     transition: border 0.3s ease;
 }
 
 
-.header__link:hover {
-    border-bottom: solid 2px var(--color-secundario);
+/* Aplica hover solo si NO tiene las clases --primary o --white */
+.header__link:hover:not(.header__link--primary):not(.header__link--white) {
+    border-bottom: solid 2px var(--color-white);
 }
+
+.header__link--primary {
+    background-color: var(--color-primary);
+    border-radius: 10px;
+}
+
+.header__link--white {
+    background-color: var(--color-white);
+    color: var(--color-secondary);
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+
 
 /* Estilos del Botón de Abrir y Cerrar */
 
@@ -99,7 +116,7 @@
     width: 40px;
     height: 5px;
     border-radius: 25px;
-    background-color: var(--color-secundario);
+    background-color: var(--color-white);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -163,6 +180,11 @@
         background-color: transparent;
     }
 
+    .header__callToAction {
+    flex-direction: row;
+    margin: 0 30px;
+}
+
     .header__menu.header__menu--active {
         box-shadow: none;
     }
@@ -175,10 +197,6 @@
     .header__button {
         display: none;
     }
-
-}
-
-@media (min-width: 1280px) {
 
 }
 

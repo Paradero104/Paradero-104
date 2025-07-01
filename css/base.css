@@ -1,16 +1,16 @@
-@import url(header.css);
+/* @import url(header.css);
 @import url(main.css);
 @import url(layout.css);
 @import url(header.css);
-@import url(footer.css);
+@import url(footer.css); */
 
 /* Crear Variables */
 :root {
-    --color-primario: #0093c0;
-    --color-secundario: #ffffff;
-    --color-terciario: #000000;
+    --color-primary: #0093c0;
+    --color-secondary: #002e6b;
+    --color-white: #ffffff;
+    --color-black: #000000;
 }
-
 
 /* Reset */
 * {
@@ -41,7 +41,7 @@ img {
     height: auto;
 }
 body {
-    background-color: var(--color-secundario);
+    background: linear-gradient(var(--color-primary), var(--color-secondary));
 }
 
 html {
@@ -49,24 +49,28 @@ html {
 }
 
 p {
-    /* text-align: left; */
+    font-size: 1.1rem;
+    color: var(--color-white);
 }
 
 h1 {
     font-size: 4rem;
-    color: var(--color-secundario);
-    margin: 0 10px;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
 }
 
 h2 {
+    font-size: 2.5rem;
+    color: var(--color-white);
+}
+
+h3 {
     font-size: 2rem;
 }
 
-h2, h3 {
-    color: var(--color-primario);
-    margin: 20px 0;
+h4 {
+    font-size: 1.5rem;
 }
+
 
 /* Estilos de container que mantendrá a los elementos y no crezcan más de 1200px */
 
@@ -75,29 +79,87 @@ h2, h3 {
     margin: 0 auto;
 }
 
+/* Estilos para los botones */
 
-.btn-header-1 {
-    background-color: var(--color-secundario);
-    color: #016a8a;
+.btn__primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    width: 180px;
+    padding: 10px 20px;
+    border-radius: 10px;
     font-weight: bold;
-    border-radius: 15px;
 }
 
-.btn-header-2 {
-    background-color: #016a8a;
-    color: var(--color-secundario);
+.btn__secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    width: 180px;
+    padding: 10px 20px;
+    border-radius: 10px;
     font-weight: bold;
-    border-radius: 15px;
 }
 
-@keyframes btn-expand {
-  0% {
-    transform: scale(0.9);
-  }
-  50% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0.9);
-  }
+.btn__white {
+    background-color: var(--color-white);
+    color: var(--color-secondary);
+    width: 180px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
 }
+
+
+/* Estilos para las cards */
+
+.card__primary,
+.card__secondary,
+.card__white {
+  color: var(--color-white);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 350px;
+  margin: 1rem auto;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+/* Color de texto para fondo blanco */
+.card__white {
+  background-color: var(--color-white);
+  color: var(--color-secondary);
+  border: 1px solid #ddd;
+}
+
+/* Fondo para las otras tarjetas */
+.card__primary {
+  background-color: var(--color-primary);
+}
+
+.card__secondary {
+  background-color: var(--color-secondary);
+}
+
+/* Hover opcional */
+.card__primary:hover,
+.card__secondary:hover,
+.card__white:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos para los formularios */
+
+/* form {
+    width: 90%;
+    max-width: 400px;
+}
+
+label {
+    outline: none;
+    width: 90%;
+    background-color: var(--color-white);
+
+} */
+

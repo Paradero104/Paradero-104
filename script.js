@@ -19,15 +19,15 @@ links.forEach((link) => {
   });
 });
 
-let lastScroll = 0;
-window.onscroll = () => {
-  const current = scrollY;
-  header.style.transform =
-    current > lastScroll ? "translateY(-100%)" : "translateY(0)";
-  lastScroll = current;
-  header.style.backgroundColor =
-    current > 0 ? "var(--color-primario)" : "transparent";
-};
+// let lastScroll = 0;
+// window.onscroll = () => {
+//   const current = scrollY;
+//   header.style.transform =
+//     current > lastScroll ? "translateY(-100%)" : "translateY(0)";
+//   lastScroll = current;
+//   header.style.backgroundColor =
+//     current > 0 ? "var(--color-secondary)" : "transparent";
+// };
 
 // ------------------------- MODAL -------------------------
 
