@@ -1,0 +1,38 @@
+/* Animación desde la izquierda */
+.animate-left {
+  opacity: 0;
+  transform: translateX(-50px); /* reducido para evitar desbordes */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: transform, opacity;
+}
+
+.animate-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Animación desde la derecha */
+.animate-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: transform, opacity;
+}
+
+.animate-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Animación desde abajo */
+.animate-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: transform, opacity;
+}
+
+.animate-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}

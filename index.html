@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/animation.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 </head>
 
@@ -26,13 +27,13 @@
                 <ul class="header__menu">
                     <li class="header__list"><a href="/" class="header__link">INICIO</a></li>
                     <li class="header__list"><a href="pages/dishes.html" class="header__link">PLATOS</a></li>
-                    <li class="header__list"><a href="#menu" class="header__link">RESERVAS</a></li>
-                    <li class="header__list"><a href="#testimonios" class="header__link">DELIVERY</a></li>
+                    <li class="header__list"><a href="#" class="header__link">RESERVAS</a></li>
+                    <li class="header__list"><a href="pages/dishes.html" class="header__link">DELIVERY</a></li>
                     <ul class="header__callToAction">
-                        <li class="header__list"><a href="#ubicacion" class="header__link header__link--primary"><i
+                        <li class="header__list"><a href="pages/cart.html" class="header__link header__link--primary"><i
                                     class="fa-solid fa-cart-shopping header__icon"></i></a></li>
-                        <li class="header__list"><a href="#" id="btn-open-modal"
-                                class="header__link header__link--white">REGÍSTRATE</a>
+                        <li class="header__list">
+                            <a href="#" id="btn-open-modal" class="header__link header__link--white">REGÍSTRATE</a>
                         </li>
                     </ul>
                 </ul>
@@ -50,34 +51,39 @@
         <!-- Sección: Hero -->
         <section class="hero" id="hero">
             <div class="hero__slider">
-                <div class="slide">
-                    <!-- <p class="">
-                        ¡Donde el mar llega directo a tu mesa! Vive la auténtica experiencia del ceviche peruano, <br>
-                        con
-                        sabor
-                        fresco, pasión y tradición en cada bocado.
-                    </p> -->
+                <div class="slide active hero__slide1">
                     <p class="hero__paragraph">EL SABOR DEL MAR EN SU PUNTO.</p>
-
-                    <!-- Call to Action -->
-                    <!-- <a href="pdf/paradero104.pdf" class="btn__secondary" download="paradero104.pdf">Descargar carta</a> -->
                 </div>
-            </div>
+                <div class="slide hero__slide2">
 
+                </div>
+                <div class="slide hero__slide3">
+                    <p class="hero__paragraph">¡Vive la experiencia del ceviche peruano!</p>
+                </div>
+
+                <!-- Botones de navegación -->
+                <button class="slider__btn prev">&#10094;</button>
+                <button class="slider__btn next">&#10095;</button>
+            </div>
         </section>
 
         <!-- Sección: Testimonios -->
         <section id="testimony" class="testimony">
             <h2 class="testimony__h2">Lo que dicen nuestros clientes</h2>
             <div class="testimony__list">
-                <blockquote class="testimony__item">"¡El mejor ceviche que he probado en mi vida!" - Carla M.
+                <blockquote class="testimony__item animate-left">"¡El mejor ceviche que he probado en mi vida!" - Carla
+                    M.
                 </blockquote>
-                <blockquote class="testimony__item">"Atención rápida y sabor incomparable." - Luis R.</blockquote>
-                <blockquote class="testimony__item">"El mejor lugar para disfrutar un ceviche fresco y auténtico." —
+                <blockquote class="testimony__item animate-right">"Atención rápida y sabor incomparable." - Luis R.
+                </blockquote>
+                <blockquote class="testimony__item animate-left">"El mejor lugar para disfrutar un ceviche fresco y
+                    auténtico." —
                     Javier M.</blockquote>
-                <blockquote class="testimony__item">"Excelente atención, ambiente acogedor y sabores que sorprenden." —
+                <blockquote class="testimony__item animate-right">"Excelente atención, ambiente acogedor y sabores que
+                    sorprenden." —
                     Paola G.</blockquote>
-                <blockquote class="testimony__item">"Una experiencia gastronómica que supera las expectativas.
+                <blockquote class="testimony__item animate-left">"Una experiencia gastronómica que supera las
+                    expectativas.
                     ¡Recomendado al 100%!" — Daniel V.</blockquote>
             </div>
         </section>
@@ -85,34 +91,39 @@
 
         <!-- Sección: Menú -->
         <section id="menu" class="menu">
-            <h2 class="menu__h2">Menú Destacado</h2>
-            <div class="menu__container">
-                <div class="card__white">
-                    <img src="img/cevicheclasico.webp" alt="Ceviche Clásico" class="menu__image">
-                    <h3 class="menu__h3">Ceviche Clásico</h3>
-                    <p class="menu__paragraph">Mariscos frescos, limón y ají.</p>
-                    <button class="btn__secondary">Comprar</button>
-                </div>
+            <div class="container">
+                <h2 class="menu__h2">Menú Destacado</h2>
+                <div class="menu__container">
+                    <a href="pages/dishes.html">
+                        <div class="card__white animate-left">
+                            <img src="img/cevicheclasico.webp" alt="Ceviche Clásico" class="menu__image">
+                            <h3 class="menu__h3">Ceviche Clásico</h3>
+                            <p class="menu__paragraph">Mariscos frescos, limón y ají.</p>
+                        </div>
+                    </a>
 
-                <div class="card__secondary">
-                    <img src="img/lechetigre.webp" alt="Leche de Tigre" class="menu__image">
-                    <h3 class="menu__h3">Leche de tigre</h3>
-                    <p class="menu__paragraph paragraph__white">Del mar a tu mesa, ¡una delicia!</p>
-                    <button class="btn__white">Comprar</button>
-                </div>
+                    <a href="pages/dishes.html">
+                        <div class="card__secondary animate-up">
+                            <img src="img/lechetigre.webp" alt="Leche de Tigre" class="menu__image">
+                            <h3 class="menu__h3 menu__h3--white">Leche de tigre</h3>
+                            <p class="menu__paragraph paragraph__white">Del mar a tu mesa, ¡una delicia!</p>
+                        </div>
+                    </a>
 
-                <div class="card__white">
-                    <img src="img/jaleaMixta.jpg" alt="Jalea Mixta" class="menu__image">
-                    <h3 class="menu__h3">Jalea Mixta</h3>
-                    <p class="menu__paragraph">Lo mejor de la casa</p>
-                    <button class="btn__secondary">Comprar</button>
+                    <a href="pages/dishes.html">
+                        <div class="card__white animate-right">
+                            <img src="img/jaleaMixta.jpg" alt="Jalea Mixta" class="menu__image">
+                            <h3 class="menu__h3">Jalea Mixta</h3>
+                            <p class="menu__paragraph">Lo mejor de la casa</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
 
         <!-- Sección: Sobre Nosotros -->
         <section id="us" class="us">
-            <div class="us__container">
+            <div class="us__container animate-left">
                 <h2 class="us__h2">SOBRE NOSOTROS</h2>
                 <p class="us__paragraph">En Paradero 104 combinamos tradición, frescura y pasión por la cocina para
                     ofrecerte el mejor ceviche de la costa. Cada día seleccionamos cuidadosamente los mariscos más
@@ -122,13 +133,13 @@
                     dedicación y cariño, para brindarte una experiencia culinaria que resalte por su sabor, frescura y
                     una calidad inigualable que nos distingue.</p>
             </div>
-            <div class="us_imageContainer">
+            <div class="us_imageContainer animate-right">
                 <img src="img/chica.png" alt="Encargada de la sede" class="us__image">
             </div>
         </section>
 
         <!-- Sección: Ubicación -->
-        <section id="headquarters" class="headquarters">
+        <section id="headquarters" class="headquarters animate-up">
             <h2 class="headquarters__h2">Sede Principal</h2>
         </section>
 
@@ -138,11 +149,12 @@
 
     <div class="btn__float">
         <a href="https://wa.me/51922477983?text=Hola" class="whatsapp-float" target="_blank" rel="noopener">
-            <span class="btn__message">¿Necesitas ayuda?</span>
+            <span class="btn__message">¡Hola! Estoy interesado en más información sobre los productos de la cevichería
+                Paradero 104. ¿Me puedes ayudar?</span>
             <i class="fa-brands fa-whatsapp btn__iconWhatsapp"></i>
         </a>
 
-        <a href="#" class="delivery-float" target="_blank" rel="noopener">
+        <a href="pages/dishes.html" class="delivery-float" target="_blank" rel="noopener">
             <span class="btn__message">Pide delivery</span>
             <i class="fa-solid fa-motorcycle btn__iconDelivery"></i>
         </a>
@@ -151,14 +163,14 @@
     <!-- Sección: Modal -->
 
     <div id="modal" class="modal">
-        <!-- Sección: Modal Registrado -->
 
+        <!-- Sección: Modal Registrado -->
         <div id="successMessage">
             <i class="fa-solid fa-circle-check"></i> Registrado correctamente.
         </div>
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2>ÚNETE A NUESTRA COMUNIDAD</h2>
+            <h2 class="modal__h2">ÚNETE A NUESTRA COMUNIDAD</h2>
 
             <form id="formulario-modal" class="formulario">
                 <input type="text" name="nombre" placeholder="Nombres y Apellidos" required>
@@ -172,7 +184,7 @@
 
     <!-- Sección: Footer -->
     <footer class="footer">
-        <div class="footer__content footer__content--map">
+        <div class="footer__content footer__content--map animate-up">
             <h3 class="footer__h3">¿Cómo Llegar?</h3>
             <p class="footer__paragraph">Estamos en Av. La Marina 104, Lima, Perú.</p>
             <iframe class="footer__map"
@@ -181,7 +193,7 @@
             </iframe>
         </div>
 
-        <div class="footer__content footer__content--info">
+        <div class="footer__content footer__content--info animate-up">
             <h4 class="footer__h4">Redes Sociales</h4>
             <div class="footer__social">
                 <div class="footer__socialContainer">
@@ -198,6 +210,8 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="slider.js"></script>
+    <script src="animation.js"></script>
 </body>
 
 </html>

@@ -1,33 +1,96 @@
 /* Sección: Hero */
 
 .hero {
-    background: linear-gradient(#002e6b 15%, transparent), url('../img/hero.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh; 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden; 
 }
 
-.hero__paragraph {
-  text-align: center;
-  font-size: 3rem;
-  font-weight: bold;
-  padding: 10px;
+.hero__slider {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  background-color: #002e6b;
 }
+
+.slide {
+  flex: 0 0 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(1,106,138,0.8), rgba(0,147,192,0.8));
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+.slide.active {
+  display: flex;
+}
+
+.hero__slide1 {
+  background-image: url(../img/hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero__slide2 {
+  background-image: url(../img/hero2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero__slide3 {
+  background-image: url(../img/jaleaMixta.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s;
+}
+
+.slider__btn:hover {
+  background: var(--color-secondary);
+}
+
+.slider__btn.prev {
+  left: 10px;
+  border-radius: 10px;
+}
+
+.slider__btn.next {
+  right: 10px;
+  border-radius: 10px;
+}
+
 
 /* Sección: testimony */
 
 .testimony {
-  padding: 3rem 2rem;
+  padding: 4rem 2rem;
   text-align: center;
 }
 
 .testimony__h2 {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .testimony__list {
@@ -36,8 +99,8 @@
 }
 
 .testimony__item {
-  margin-bottom: 1.5rem;
-  padding: 2rem 1.5rem;
+  margin-bottom: 3rem;
+  padding: 3rem 1.5rem;
   background-color: var(--color-white);
   border-left: 8px solid var(--color-secondary);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
@@ -78,6 +141,10 @@
   font-size: 1.25rem;
   margin: 0.5rem 0;
   color: var(--color-primary);
+}
+
+.menu__h3--white {
+  color: var(--color-white);
 }
 
 .menu__paragraph {
@@ -144,44 +211,6 @@
 }
 
 
-
-
-
-
-/* Otra: Sección */
-
-.form-container {
-
-  padding: 2rem;
-  margin: 1rem;
-  border-radius: 12px;
-}
-
-.form-container h2 {
-  text-align: center;
-}
-
-
-
-.formulario input,
-.formulario button {
-    padding: 0.8rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.formulario button {
-    background-color: var(--color-primario);
-    color: var(--color-secundario);
-    border: none;
-    cursor: pointer;
-}
-
-.formulario button:hover {
-    background-color :#016a8a;
-}
-
 /* Sección: botón */
 
 .btn__float {
@@ -192,7 +221,7 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  z-index: 100;
+  z-index: 80;
 }
 
 .btn__float a {
@@ -200,8 +229,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   color: var(--color-white);
   font-size: 2.5rem;
   border-radius: 50%;
@@ -217,6 +246,10 @@
 
 .delivery-float {
   background-color: var(--color-secondary);
+}
+
+.btn__iconDelivery {
+  font-size: 2.1rem;
 }
 
 .btn__float a:hover {
@@ -284,7 +317,7 @@
 }
 
 .modal-content {
-  background-color: #fff;
+  background-color: var(--color-white);
   padding: 2rem;
   border-radius: 10px;
   max-width: 400px;
@@ -293,9 +326,11 @@
   position: relative;
 }
 
-.modal-content h2 {
-  margin-bottom: 1rem;
+.modal__h2 {
+  color: var(--color-primary);
+    margin-bottom: 1rem;
 }
+
 
 .modal-content input,
 .modal-content button {
@@ -307,8 +342,8 @@
 }
 
 .modal-content button {
-  background-color: var(--color-primario);
-  color: var(--color-secundario);
+  background-color: var(--color-primary);
+  color: var(--color-white);
   font-weight: bold;
   border: none;
   cursor: pointer;
@@ -347,20 +382,4 @@
   position: relative;
 }
 
-/* Frase */
-.frase-impacto {
-  font-size: 1.3rem;
-  font-weight: 400;
-  margin: 0 10px;
-  margin-bottom: 1.5rem;
-  color: var(--color-secundario);
-  line-height: 1.6;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
-}
 
-@media (min-width: 1024px) {
-  .whatsapp-float {
-  bottom: 70px;
-  right: 100px;
-}
-}

@@ -13,6 +13,9 @@
 }
 
 /* Reset */
+
+
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -47,6 +50,11 @@ body {
 html {
     scroll-behavior: smooth;
 }
+
+html, body {
+  overflow-x: hidden;
+}
+
 
 p {
     font-size: 1.1rem;
@@ -96,6 +104,7 @@ h4 {
     padding: 10px 20px;
     border-radius: 10px;
     font-weight: bold;
+    text-align: center;
 }
 
 .btn__white {
@@ -105,6 +114,7 @@ h4 {
     padding: 10px 20px;
     border-radius: 10px;
     font-weight: bold;
+    text-align: center;
 }
 
 
