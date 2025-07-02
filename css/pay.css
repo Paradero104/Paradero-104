@@ -4,6 +4,9 @@ body {
     min-height: 100vh;
 }
 
+p {
+  text-align: center;
+}
 
 .pay__paragraph {
     text-align: center;

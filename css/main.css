@@ -258,7 +258,7 @@
 
 .btn__message {
   position: absolute;
-  right: 100px;
+  right: 80px;
   background-color: var(--color-white);
   color: var(--color-primary);
   padding: 6px 10px;
@@ -326,9 +326,9 @@
   position: relative;
 }
 
-.modal__h2 {
+.modal__h3 {
   color: var(--color-primary);
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 
