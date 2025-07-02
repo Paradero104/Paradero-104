@@ -31,13 +31,26 @@ links.forEach((link) => {
 
 // ------------------------- MODAL -------------------------
 
-window.addEventListener("load", function () {
+// window.addEventListener("load", function () {
+//   document.getElementById("modal").style.display = "flex";
+// });
+
+// document.querySelector(".close").addEventListener("click", function () {
+//   document.getElementById("modal").style.display = "none";
+// });
+
+document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("modal").style.display = "flex";
+
+  const closeBtn = document.querySelector(".close");
+  if (closeBtn) {
+    closeBtn.addEventListener("click", function () {
+      document.getElementById("modal").style.display = "none";
+    });
+  }
 });
 
-document.querySelector(".close").addEventListener("click", function () {
-  document.getElementById("modal").style.display = "none";
-});
+// xd
 
 window.addEventListener("click", function (e) {
   const modal = document.getElementById("modal");
