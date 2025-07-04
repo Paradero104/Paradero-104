@@ -21,7 +21,7 @@ function prevSlide() {
 nextBtn.addEventListener("click", nextSlide);
 prevBtn.addEventListener("click", prevSlide);
 
-// Cambio automático cada 6 segundos
-setInterval(nextSlide, 6000);
+// Cambio automático cada 10 segundos
+setInterval(nextSlide, 10000);
 
 showSlide(current);

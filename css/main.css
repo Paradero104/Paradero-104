@@ -1,6 +1,7 @@
 /* Sección: Hero */
 
 .hero {
+  padding-top: 80px;
     height: 100vh;
     width: 100%;
     position: relative;
@@ -13,6 +14,53 @@
   display: flex;
   position: relative;
   background-color: #002e6b;
+}
+
+.banner__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.banner__h2 {
+  text-shadow: 0 2px 7px rgba(0, 0, 0, 0.6);
+  font-weight: 100;
+  font-size: 3.9rem;
+  margin: 0;
+  line-height: 0;
+}
+
+.banner__h3 {
+  text-shadow: 0 2px 7px rgba(0, 0, 0, 0.6);
+  font-size: 7rem;
+  font-weight: 900;
+  margin: 0;
+}
+
+.banner__p {
+  font-size: 1.2rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+  margin-top: 1rem;
+
+}
+
+.btn__cta {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn__cta:hover {
+  background-color: var(--color-white);
+  color: var(--color-secondary);
 }
 
 .slide {
@@ -33,7 +81,7 @@
 }
 
 .hero__slide1 {
-  background-image: url(../img/hero.jpg);
+  background-image: linear-gradient(#000, transparent, rgba(0, 0, 0, 0.8)), url(../img/jaleaMixta.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -47,7 +95,7 @@
 }
 
 .hero__slide3 {
-  background-image: url(../img/jaleaMixta.jpg);
+  background-image:  url(../img/hero.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -64,11 +112,11 @@
   padding: 0.5rem 1rem;
   cursor: pointer;
   z-index: 10;
-  transition: background 0.3s;
+  transition: background-color ease-in 0.3s;
 }
 
 .slider__btn:hover {
-  background: var(--color-secondary);
+  background-color: var(--color-secondary);
 }
 
 .slider__btn.prev {
@@ -382,4 +430,56 @@
   position: relative;
 }
 
+/* Tablet (pantallas ≥768px) */
+@media screen and (min-width: 768px) {
+  .banner__container {
+    padding: 3rem 2rem;
+    text-align: left;
+    align-items: flex-start;
+  }
 
+  .banner__h2 {
+    font-size: 4.5rem;
+  }
+
+  .banner__h3 {
+    font-size: 8rem;
+  }
+
+  .banner__p {
+    font-size: 1.4rem;
+    max-width: 90%;
+  }
+
+  .btn__cta {
+    font-size: 1.2rem;
+    padding: 12px 24px;
+  }
+}
+
+/* Desktop (pantallas ≥1024px) */
+@media screen and (min-width: 1024px) {
+  .banner__container {
+    max-width: 1200px;
+    padding: 4rem 2rem;
+    margin: 0 auto;
+  }
+
+  .banner__h2 {
+    font-size: 5rem;
+  }
+
+  .banner__h3 {
+    font-size: 10rem;
+  }
+
+  .banner__p {
+    font-size: 1.5rem;
+    max-width: 800px;
+  }
+
+  .btn__cta {
+    font-size: 1.3rem;
+    padding: 14px 32px;
+  }
+}
