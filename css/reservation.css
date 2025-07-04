@@ -26,13 +26,11 @@ main {
 }
 
 .reservation__button {
-    cursor: pointer;
-    position: absolute;
-    border-radius: 50%;
-}
-
-.reservation__button:hover {
-  background-color: var(--color-primary);
+  background-color: transparent;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  position: absolute;
+  border-radius: 50%;
 }
 
 .reservation__button.active {
