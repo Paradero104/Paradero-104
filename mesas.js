@@ -1,53 +1,51 @@
-//Estilos del botón de mesas
-// document.querySelectorAll(".reservation__button").forEach((btn) => {
-//   btn.addEventListener("click", function () {
-//     btn.classList.toggle("active");
-//   });
-// });
-
 const botones = document.querySelectorAll(".reservation__button");
 let mesaSeleccionada = null;
 
 const modal = document.getElementById("modalReserva");
 const cerrarModal = document.getElementById("cerrarModal");
 
+// Manejo de clic en mesas
 botones.forEach((btn) => {
   btn.addEventListener("click", () => {
     const id = btn.dataset.id;
 
+    // Si haces clic en la misma mesa: desactivarla
     if (mesaSeleccionada === id) {
       btn.classList.remove("active");
       mesaSeleccionada = null;
-      return;
+      return; // No abrir el modal
     }
 
-    if (mesaSeleccionada) return;
+    // Si ya hay una mesa seleccionada, no permitir otra selección
+    if (mesaSeleccionada) {
+      return; // Ignora el clic
+    }
 
+    // Activar nueva mesa y mostrar modal
     btn.classList.add("active");
     mesaSeleccionada = id;
-
-    // Mostrar el modal
     modal.style.display = "flex";
   });
 });
 
-// Cerrar el modal
+// Cerrar modal con la X
 cerrarModal.addEventListener("click", () => {
   modal.style.display = "none";
 });
 
-// También puedes cerrarlo haciendo clic fuera del contenido
+// Cerrar modal haciendo clic fuera
 window.addEventListener("click", (e) => {
   if (e.target === modal) {
     modal.style.display = "none";
   }
 });
 
-// Formulario de envío (puedes luego enviarlo a backend o mostrar mensaje)
+// Enviar formulario
 document.getElementById("formReserva").addEventListener("submit", function (e) {
   e.preventDefault();
   alert("Reserva enviada correctamente ✅");
   modal.style.display = "none";
-
+  // Si quieres limpiar la selección después de enviar, puedes hacer esto:
+  // limpiarSeleccion();
   window.location.href = "../index.html";
 });
