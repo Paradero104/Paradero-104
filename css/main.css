@@ -197,7 +197,7 @@
 
 .headquarters {
   height: 600px;
-  background: linear-gradient(var(--color-primary), transparent), url(../img/WhatsApp\ Image\ 2025-06-06\ at\ 5.10.32\ PM.jpg);
+  background: url(../img/WhatsApp\ Image\ 2025-06-06\ at\ 5.10.32\ PM.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -207,7 +207,7 @@
   text-align: center;
   padding: 2rem 0;
   font-size: 3rem;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 }
 
 

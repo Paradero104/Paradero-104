@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservación - Paradero 104</title>
+    <link rel="shortcut icon" href="img/logo-paradero-104.png" type="image/png">
+    <link rel="stylesheet" href="../css/reservation.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/header.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+
+<body>
+    <!-- Sección del Header -->
+    <header class="header">
+        <div class="header__logo">
+            <a href="../index.html">
+                <img src="../img/logo-paradero-104.png" alt="Logo Paradero 104" class="header__img">
+            </a>
+        </div>
+        <nav class="header__nav">
+            <div class="header__navContainer">
+                <ul class="header__menu">
+                    <li class="header__list"><a href="../index.html" class="header__link">INICIO</a></li>
+                    <li class="header__list"><a href="dishes.html" class="header__link">PLATOS</a></li>
+                    <li class="header__list"><a href="#" class="header__link">RESERVAS</a></li>
+                    <li class="header__list"><a href="delivery.html" class="header__link">DELIVERY</a></li>
+                    <ul class="header__callToAction">
+                        <li class="header__list">
+                            <a href="cart.html" class="header__link header__link--primary">
+                                <i class="fa-solid fa-cart-shopping header__icon"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </ul>
+                <button class="header__button">
+                    <span class="header__bar"></span>
+                    <span class="header__bar"></span>
+                    <span class="header__bar"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="reservation__imageContainer">
+            <!-- Mesas cuadradas -->
+            <img class="reservation__image" src="../img/mesaFondo.png" alt="">
+            <button class="reservation__button" data-id="1"><img src="../img/mesa1.png" alt=""></button>
+            <button class="reservation__button" data-id="2"><img src="../img/mesa1.png" alt=""></button>
+            <button class="reservation__button" data-id="3"><img src="../img/mesa1.png" alt=""></button>
+            <button class="reservation__button" data-id="4"><img src="../img/mesa1.png" alt=""></button>
+
+            <!-- Mesas rombo -->
+            <button class="reservation__button" data-id="5"><img src="../img/mesa2.png" alt=""></button>
+            <button class="reservation__button" data-id="6"><img src="../img/mesa2.png" alt=""></button>
+            <button class="reservation__button" data-id="7"><img src="../img/mesa2.png" alt=""></button>
+            <button class="reservation__button" data-id="8"><img src="../img/mesa2.png" alt=""></button>
+
+            <button class="reservation__button" data-id="9"><img src="../img/mesa2.png" alt=""></button>
+            <button class="reservation__button" data-id="10"><img src="../img/mesa2.png" alt=""></button>
+
+            <!-- Mesas redonda -->
+            <button class="reservation__button" data-id="11"><img src="../img/mesa3.png" alt=""></button>
+            <button class="reservation__button" data-id="12"><img src="../img/mesa3.png" alt=""></button>
+            <button class="reservation__button" data-id="13"><img src="../img/mesa3.png" alt=""></button>
+            <button class="reservation__button" data-id="14"><img src="../img/mesa3.png" alt=""></button>
+            <button class="reservation__button" data-id="15"><img src="../img/mesa3.png" alt=""></button>
+            <button class="reservation__button" data-id="16"><img src="../img/mesa3.png" alt=""></button>
+            <button class="reservation__button" data-id="17"><img src="../img/mesa3.png" alt=""></button>
+        </div>
+    </main>
+    <!-- MODAL -->
+    <div id="modalReserva" class="modal">
+        <div class="modal__contenido">
+            <span class="modal__cerrar" id="cerrarModal">&times;</span>
+            <h3 class="reserva__h3">Completa tu reserva</h3>
+            <form id="formReserva">
+                <input type="text" placeholder="Nombres y Apellidos" required />
+                <input type="tel" placeholder="Celular" required />
+                <input type="email" placeholder="Correo" required />
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <script src="../mesas.js"></script>
+</body>
+
+</html>

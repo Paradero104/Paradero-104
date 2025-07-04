@@ -1,0 +1,192 @@
+body {
+    background: linear-gradient(var(--color-secondary) 15%, transparent, #000), url(../img/WhatsApp\ Image\ 2025-06-06\ at\ 5.10.32\ PM.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.reservation__imageContainer {
+    padding-top: 2rem;
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    background: #fff;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+.reservation__image {
+    position: relative;
+}
+
+.reservation__button {
+    cursor: pointer;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.reservation__button:hover {
+  background-color: var(--color-primary);
+}
+
+.reservation__button.active {
+  background-color: var(--color-primary);
+}
+
+[data-id="1"] {
+    width: 15%;
+    bottom: 6%;
+    left: 14%;
+}
+
+[data-id="2"] {
+    width: 15%;
+    bottom: 21%;
+    left: 14%;
+}
+
+[data-id="3"] {
+    width: 15%;
+    bottom: 36%;
+    left: 14%;
+}
+
+[data-id="4"] {
+    width: 15%;
+    bottom: 50%;
+    left: 14%;
+}
+
+
+
+[data-id="5"] {
+    width: 15%;
+    bottom: 6%;
+    left: 28%;
+}
+
+[data-id="6"] {
+    width: 15%;
+    bottom: 21%;
+    left: 28%;
+}
+
+[data-id="7"] {
+    width: 15%;
+    bottom: 36%;
+    left: 28%;
+}
+
+[data-id="8"] {
+    width: 15%;
+    bottom: 50%;
+    left: 28%;
+}
+
+
+[data-id="9"] {
+    width: 15%;
+    bottom: 58%;
+    left: 42%;
+}
+
+[data-id="10"] {
+    width: 15%;
+    bottom: 45%;
+    left: 42%;
+}
+
+[data-id="11"] {
+    width: 15%;
+    top: 20%;
+    left: 55%;
+}
+
+[data-id="12"] {
+    width: 15%;
+    top: 35%;
+    left: 55%;
+}
+
+[data-id="13"] {
+    width: 15%;
+    top: 49%;
+    left: 55%;
+}
+
+[data-id="14"] {
+    width: 15%;
+    top: 10%;
+    right: 16%;
+}
+
+[data-id="15"] {
+    width: 15%;
+    top: 25%;
+    right: 16%;
+}
+
+[data-id="16"] {
+    width: 15%;
+    top: 39%;
+    right: 16%;
+}
+
+[data-id="17"] {
+    width: 15%;
+    top: 52%;
+    right: 16%;
+}
+
+/* Sección: Modal */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__contenido {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+.modal__cerrar {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.modal__contenido input {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+.modal__contenido button {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+
