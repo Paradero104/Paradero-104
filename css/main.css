@@ -81,21 +81,21 @@
 }
 
 .hero__slide1 {
-  background-image: linear-gradient(#000, transparent, rgba(0, 0, 0, 0.8)), url(../img/jaleaMixta.jpg);
+  background-image: linear-gradient(#000, transparent, rgba(0, 0, 0, 0.8)), url(../img/jaleaMixta.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .hero__slide2 {
-  background-image: url(../img/hero2.jpg);
+  background-image: url(../img/hero2.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .hero__slide3 {
-  background-image:  url(../img/hero.jpg);
+  background-image:  url(../img/hero.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
