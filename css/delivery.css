@@ -15,6 +15,9 @@ body {
   margin: 0 auto;
 }
 
+.menu__paragraph {
+  margin: 0 15px;
+}
 
 .card__white img {
   width: 100%;

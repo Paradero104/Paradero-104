@@ -82,6 +82,32 @@
                 <input type="text" placeholder="Nombres y Apellidos" required />
                 <input type="tel" placeholder="Celular" required />
                 <input type="email" placeholder="Correo" required />
+
+                <!-- MODAL PERSONAS -->
+                <div class="form-group">
+                    <button id="abrirModalPersonas" class="buttonBorder" type="button">CANTIDAD DE PERSONAS</button>
+                    <!-- input oculto que guarda la selección -->
+                    <input type="hidden" id="personasSeleccionadas" name="personas">
+                </div>
+
+                <!-- MODAL PERSONAS -->
+                <div id="modalPersonas" class="modal">
+                    <div class="modal__contenido">
+                        <span class="modal__cerrar" id="cerrarModalPersonas">&times;</span>
+                        <h3>Selecciona la cantidad de personas</h3>
+                        <ul class="lista-personas">
+                            <li data-value="4">4 personas</li>
+                            <li data-value="5">5 personas</li>
+                            <li data-value="6">6 personas</li>
+                            <li data-value="7">7 personas</li>
+                            <li data-value="8">8 personas</li>
+                            <li data-value="9">9 personas</li>
+                            <li data-value="10">10 personas</li>
+                            <li data-value="11">11 personas</li>
+                            <li data-value="12">12 personas</li>
+                        </ul>
+                    </div>
+                </div>
                 <button type="submit">Enviar</button>
             </form>
         </div>

@@ -49,3 +49,33 @@ document.getElementById("formReserva").addEventListener("submit", function (e) {
   // limpiarSeleccion();
   window.location.href = "../index.html";
 });
+
+const abrirModalPersonas = document.getElementById("abrirModalPersonas");
+const modalPersonas = document.getElementById("modalPersonas");
+const cerrarModalPersonas = document.getElementById("cerrarModalPersonas");
+const opcionesPersonas = document.querySelectorAll(".lista-personas li");
+const inputPersonas = document.getElementById("personasSeleccionadas");
+
+abrirModalPersonas.addEventListener("click", () => {
+  modalPersonas.style.display = "flex";
+});
+
+cerrarModalPersonas.addEventListener("click", () => {
+  modalPersonas.style.display = "none";
+});
+
+// Cierra clickeando fuera del contenido
+window.addEventListener("click", (e) => {
+  if (e.target === modalPersonas) {
+    modalPersonas.style.display = "none";
+  }
+});
+
+// Cuando seleccionan una opción
+opcionesPersonas.forEach((op) => {
+  op.addEventListener("click", () => {
+    abrirModalPersonas.textContent = op.textContent; // cambia el botón
+    inputPersonas.value = op.dataset.value; // guarda el número en el input
+    modalPersonas.style.display = "none"; // cierra modal
+  });
+});
