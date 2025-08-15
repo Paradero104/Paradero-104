@@ -124,7 +124,7 @@ h4 {
 .card__secondary,
 .card__white {
   color: var(--color-white);
-  padding: 1.5rem;
+  padding-bottom: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
