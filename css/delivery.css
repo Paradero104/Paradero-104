@@ -15,10 +15,6 @@ body {
   margin: 0 auto;
 }
 
-.card__white {
-  padding: 0;
-  padding-bottom: 20px ;
-}
 
 .card__white img {
   width: 100%;
