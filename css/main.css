@@ -240,6 +240,64 @@
   height: auto;
 }
 
+/* Sección: Delivery */
+
+.delivery {
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.containerDelivery {
+  position: relative;
+  color: #fff;
+  width: 100%;
+  border-radius: 12px;
+  padding: 2rem 1rem;
+  text-align: center;
+  margin: 0 50px;
+  margin-bottom: 50px;
+  background: var(--color-secondary); /* contenedor negro */
+}
+
+/* Imagen en mobile: centrada arriba */
+.containerDelivery img {
+  position: static;
+  max-width: 350px;
+  margin: 0 auto 1.5rem;
+  display: block;
+}
+
+/* Texto debajo de la imagen */
+.deliveryContent {
+  max-width: 100%;
+}
+
+.deliveryContent h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.deliveryContent p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.deliveryContent a {
+  display: inline-block;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.deliveryContent a:hover {
+  background: var(--color-white);
+  color: var(--color-secondary);
+}
 
 /* Sección: Sede */
 
@@ -455,6 +513,32 @@
     font-size: 1.2rem;
     padding: 12px 24px;
   }
+      .containerDelivery {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: center;
+    text-align: left;
+    min-height: 350px;
+    padding: 2rem;
+  }
+
+  .containerDelivery img {
+    left: 60px;
+    bottom: 0;
+    max-width: 320px;
+    margin: 0;
+  }
+
+  .deliveryContent {
+    margin-right: 50px;
+    max-width: 600px;
+  }
+
+  .deliveryContent h2 {
+    font-size: 2rem;
+  }
+
 }
 
 /* Desktop (pantallas ≥1024px) */
@@ -482,4 +566,7 @@
     font-size: 1.3rem;
     padding: 14px 32px;
   }
+
+
+  
 }
