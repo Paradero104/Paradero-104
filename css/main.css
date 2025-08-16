@@ -256,9 +256,8 @@
   border-radius: 12px;
   padding: 2rem 1rem;
   text-align: center;
-  margin: 0 50px;
   margin-bottom: 50px;
-  background: var(--color-secondary); /* contenedor negro */
+  background: var(--color-secondary); 
 }
 
 /* Imagen en mobile: centrada arriba */
@@ -513,7 +512,7 @@
     font-size: 1.2rem;
     padding: 12px 24px;
   }
-      .containerDelivery {
+    .containerDelivery {
     display: flex;
     align-items: center;
     gap: 50px;
@@ -521,6 +520,7 @@
     text-align: left;
     min-height: 350px;
     padding: 2rem;
+    margin: 0 50px;
   }
 
   .containerDelivery img {
